@@ -45,3 +45,20 @@ print("The list of numbers are ")
 print(1,2,3,4,5,6)
 print("The new pattern is")
 print(1,2,3,4,5,6, separator: "-")
+print()
+print("***********************************************")
+//***************************************************************
+//Declaration of variable
+var mobileBrand = "Apple"
+mobileBrand = "Samsung"
+print(mobileBrand)
+print()
+
+let pi = 3.14
+print(pi)
+print()
+
+//Explicit Declaration of Variable
+var age2 : Int = 21
+age2 = age2 * 2
+print(age2)
