@@ -27,9 +27,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="lastNameTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="RBy-lM-R8I"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzA-kG-cfm">
                                 <rect key="frame" x="54" y="143" width="83" height="21"/>
@@ -84,7 +81,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="firstNameTextField" destination="9uW-33-fed" id="0nK-3G-chP"/>
+                        <outlet property="firstNameTextField" destination="9uW-33-fed" id="5ec-2c-lRw"/>
                         <outlet property="fullNameLabel" destination="sdq-xf-AWt" id="m8y-oc-jZR"/>
                         <outlet property="initialsLabel" destination="HT7-Xf-pF6" id="lpT-pz-9nh"/>
                         <outlet property="lastNameTextField" destination="Wh1-OB-ibQ" id="2ww-r0-cq1"/>

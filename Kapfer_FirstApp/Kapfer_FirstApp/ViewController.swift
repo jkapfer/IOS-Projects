@@ -9,20 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+   
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var initialsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    @IBOutlet weak var firstNameTextField: UITextField!
+   
     
-    @IBOutlet weak var lastNameTextField: UITextField!
-
-    
-    @IBOutlet weak var fullNameLabel: UILabel!
-    
-    @IBOutlet weak var initialsLabel: UILabel!
-    
-    @IBAction func onClickOfSubmit(_ sender: Any) {
+    @IBAction func onClickOfSubmit(_ sender: UIButton) {
         if(firstNameTextField.text!.count != 0 && lastNameTextField.text!.count != 0)
         {
         var fullName:String = ("Full Name: \(lastNameTextField.text!), \(firstNameTextField.text!)")
@@ -38,13 +37,18 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func onClickOfReset(_ sender: Any) {
-        fullNameLabel.text = ""
-        initialsLabel.text = ""
+    @IBAction func onClickOfReset(_ sender: UIButton) {
         firstNameTextField.text = ""
         lastNameTextField.text = ""
+        fullNameLabel.text = ""
+        initialsLabel.text = ""
+        //if firstNameTextField.text!.isEmpty
+        //{
         firstNameTextField.becomeFirstResponder()
+        //}
+        
     }
     
 }
+
 
