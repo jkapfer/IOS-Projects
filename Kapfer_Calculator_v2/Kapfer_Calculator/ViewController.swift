@@ -22,282 +22,194 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
-    var arg1:Float = 0.0
-    var arg2:Float = 0.0
-    var cState = "ac"
-    //calc func btn
-    @IBAction func clearBTN(_ sender: UIButton) {
-        if displayOutlet.text!.rangeOfCharacter(from: CharacterSet(charactersIn: "x+-/")) != nil && cState == "c"
-        {
-            var temp = displayOutlet.text![displayOutlet.text!.startIndex]
-            displayOutlet.text! = "\(temp)"
-            clearBTN.setTitle("AC", for: [])
-            cState = "ac"
-            
-        }
-        else if cState == "ac"
-        {
-            displayOutlet.text! = ""
-            historyOutlet.text! = ""
-        }
-        else
-        {
-            displayOutlet.text! = ""
-            clearBTN.setTitle("AC", for: [])
-            cState = "ac"
-        }
+    //funtionc to update display with input buffer
+    func updateDisOut()
+    {
+        displayOutlet.text! = inputBuffer
     }
-    @IBAction func pnBTN(_ sender: UIButton) {
-        if (displayOutlet.text!.first != ("-") && displayOutlet.text!.count >= 2){
-            if displayOutlet.text!.first == "+"
-            {
-                displayOutlet.text!.insert("-", at: displayOutlet.text!.index(after: displayOutlet.text!.startIndex))
-            }
-            else{
-                displayOutlet.text!.insert("-", at: displayOutlet.text!.startIndex)
-            }
-        }
-        else if (displayOutlet.text!.count >= 2)
-        {
-            displayOutlet.text!.remove(at: displayOutlet.text!.startIndex)
-        }
-        else
-        {
-            displayOutlet.text!.insert("-", at: displayOutlet.text!.startIndex)
+    
+    func calc(array:Array<Substring>) -> Float
+    {
+        switch array[1] {
+        case "x":
+            let out:Float = Float(array[0])! * Float(array[2])!
+            return out
+        default:
+            var def:Float = 0.0
+            return def
         }
         
     }
+    func eq(inputArr: Array<Substring>)
+    {
+        var arr:Array = inputArr
+        //grabbing chunk to perform calculation with
+        if !inputArr.isEmpty {
+            let calcStr = inputArr[0]
+            //removing chunk so magic can happen
+            arr.removeFirst()
+            //putting into array to be passed to function
+            let calcArr:Array = calcStr.split(separator: "|")
+            if arr.isEmpty
+            {
+                displayOutlet.text! = "\(calc(array:calcArr))"
+            }
+            else{
+                var newArg:String = "\(calc(array:calcArr))"
+                var str = newArg + arr[0] + "|"
+                var arr2 = str.split(separator: "|")
+                arr.removeFirst()
+                eq(inputArr:arr2)
+            }
+            
+        }
+        
+    }
+    
+    //declaring Variables
+    var inputBuffer:String = ""
+    
+    //calc func btn
+    @IBAction func clearBTN(_ sender: UIButton) {
+        displayOutlet.text! = ""
+        inputBuffer = ""
+        historyOutlet.text! = ""
+    }
+    @IBAction func pnBTN(_ sender: UIButton) {
+        
+    }
     @IBAction func percBTN(_ sender: UIButton) {
-        arg1 = Float(displayOutlet.text!)!
-        displayOutlet.text! = "\(arg1 / 100)"
+        
     }
     
     //number btns
     @IBAction func zeroBTN(_ sender: UIButton) {
-        clearBTN.setTitle("C", for: [])
-        cState = "c"
-        displayOutlet.text! += "0"
+        inputBuffer += "0"
+        updateDisOut()
     }
     @IBAction func oneBTN(_ sender: UIButton) {
-        clearBTN.setTitle("C", for: [])
-        cState = "c"
-        displayOutlet.text! += "1"
+        inputBuffer += "1"
+        updateDisOut()
     }
     @IBAction func twoBTN(_ sender: UIButton) {
-        clearBTN.setTitle("C", for: [])
-        cState = "c"
-        displayOutlet.text! += "2"
+        inputBuffer += "2"
+        updateDisOut()
     }
     @IBAction func threeBTN(_ sender: UIButton) {
-        clearBTN.setTitle("C", for: [])
-        cState = "c"
-        displayOutlet.text! += "3"
+        inputBuffer += "3"
+        updateDisOut()
     }
     @IBAction func fourBTN(_ sender: UIButton) {
-        clearBTN.setTitle("C", for: [])
-        cState = "c"
-        displayOutlet.text! += "4"
+        inputBuffer += "4"
+        updateDisOut()
     }
     @IBAction func fiveBTN(_ sender: UIButton) {
-        clearBTN.setTitle("C", for: [])
-        cState = "c"
-        displayOutlet.text! += "5"
+        inputBuffer += "5"
+        updateDisOut()
     }
     @IBAction func sixBTN(_ sender: UIButton) {
-        clearBTN.setTitle("C", for: [])
-        cState = "c"
-        displayOutlet.text! += "6"
+        inputBuffer += "6"
+        updateDisOut()
     }
     @IBAction func sevenBTN(_ sender: UIButton) {
-        clearBTN.setTitle("C", for: [])
-        cState = "c"
-        displayOutlet.text! += "7"
+        inputBuffer += "7"
+        updateDisOut()
     }
     @IBAction func eightBTN(_ sender: UIButton) {
-        clearBTN.setTitle("C", for: [])
-        cState = "c"
-        displayOutlet.text! += "8"
+        inputBuffer += "8"
+        updateDisOut()
     }
     @IBAction func nineBTN(_ sender: UIButton) {
-        clearBTN.setTitle("C", for: [])
-        cState = "c"
-        displayOutlet.text! += "9"
+        inputBuffer += "9"
+        updateDisOut()
     }
     @IBAction func decBTN(_ sender: UIButton) {
-        clearBTN.setTitle("C", for: [])
-        cState = "c"
-        displayOutlet.text! += "."
+        inputBuffer += "."
+        updateDisOut()
     }
     
     //func buttons
     @IBAction func divBTN(_ sender: UIButton) {
         if !displayOutlet.text!.isEmpty
         {
-            arg1 = Float(displayOutlet.text!)!
-            historyOutlet.text! = displayOutlet.text!
-            displayOutlet.text! = ""
-            displayOutlet.text!.append("/")
-            //disabling function button to prevent crashing
-            //it becomes enabled after running a calculation
-            divBTN.isEnabled = false
-            multBTN.isEnabled = false
-            subBTN.isEnabled = false
-            addBTN.isEnabled = false
-            
+            if inputBuffer.contains("|")
+            {
+                inputBuffer += "#|/|"
+                updateDisOut()
+            }
+            else{
+                inputBuffer += "|/|"
+            }
         }
     }
     @IBAction func multBTN(_ sender: UIButton) {
         if !displayOutlet.text!.isEmpty
         {
-            arg1 = Float(displayOutlet.text!)!
-            historyOutlet.text! = displayOutlet.text!
-            displayOutlet.text! = ""
-            displayOutlet.text!.append("x")
-            divBTN.isEnabled = false
-            multBTN.isEnabled = false
-            subBTN.isEnabled = false
-            addBTN.isEnabled = false
+            if inputBuffer.contains("|")
+            {
+                inputBuffer += "#|x|"
+                updateDisOut()
+            }
+            else{
+                inputBuffer += "|x|"
+            }
         }
     }
     @IBAction func subBTN(_ sender: UIButton) {
         if !displayOutlet.text!.isEmpty
         {
-            arg1 = Float(displayOutlet.text!)!
-            historyOutlet.text! = displayOutlet.text!
-            displayOutlet.text! = ""
-            displayOutlet.text!.append("-")
+            if inputBuffer.contains("|")
+            {
+                inputBuffer += "#|-|"
+                updateDisOut()
+            }
+            else{
+                inputBuffer += "|-|"
+            }
         }
  
     }
     @IBAction func addBTN(_ sender: UIButton) {
         if !displayOutlet.text!.isEmpty
         {
-            arg1 = Float(displayOutlet.text!)!
-            historyOutlet.text! = displayOutlet.text!
-            displayOutlet.text! = ""
-            displayOutlet.text!.append("+")
+            if inputBuffer.contains("|")
+            {
+                inputBuffer += "#|+|"
+                updateDisOut()
+            }
+            else{
+                inputBuffer += "|+|"
+            }
         }
         
     }
     @IBAction func eqBTN(_ sender: UIButton) {
-        //functions for doing calculatory stuff
-        func add(f1: Float, f2: Float) -> String
-        {
-            historyOutlet.text! = "\(f1) + \(f2)"
-            var calc:String = String(arg1 + arg2)
-            return calc
-        }
-        func sub(f1: Float, f2: Float) -> String
-        {
-            historyOutlet.text! = "\(f1) - \(f2)"
-            var calc:String = String(arg1 - arg2)
-            return calc
-        }
-        func div(f1: Float, f2: Float) -> String
-        {
-            historyOutlet.text! = "\(f1) / \(f2)"
-            var calc:String = String(arg1 / arg2)
-            return calc
-        }
-        func mult(f1: Float, f2: Float) -> String
-        {
-            historyOutlet.text! = "\(f1) x \(f2)"
-            var calc:String = String(arg1 * arg2)
-            return calc
-        }
-        //logic
-        if displayOutlet.text!.contains("+")
-        {
-            
-            if (displayOutlet.text!.contains("-"))
-            {
-                var temp = displayOutlet.text!
-                temp.remove(at: displayOutlet.text!.startIndex)
-                temp.remove(at: displayOutlet.text!.startIndex)
-                //displayOutlet.text! = temp
-                arg2 = Float(temp)!
-                displayOutlet.text! = sub(f1: arg1, f2: arg2)
-                
-            }
-            else {
-                arg2 = Float(displayOutlet.text!)!
-                displayOutlet.text! = add(f1: arg1, f2: arg2)
-            }
-            
-        }
-        else if displayOutlet.text!.contains("-")
-        {
-            if displayOutlet.text!.count >= 2
-            {
-                if (displayOutlet.text!.hasPrefix("--"))
-                {
-                    var temp = displayOutlet.text!
-                    temp.remove(at: displayOutlet.text!.startIndex)
-                    temp.remove(at: displayOutlet.text!.startIndex)
-                    //displayOutlet.text! = temp
-                    arg2 = Float(temp)!
-                    displayOutlet.text! = add(f1: arg1, f2: arg2)
-                    
-                }
-                else {
-                    arg2 = Float(displayOutlet.text!)!
-                    displayOutlet.text! = sub(f1: arg1, f2: arg2)
-                }
-                
-            }
-            else
-            {
-                arg2 = Float(historyOutlet.text!)!
-                displayOutlet.text! = sub(f1: arg1, f2: arg2)
-            }
-        }
-        else if displayOutlet.text!.contains("/")
-        {
-            if displayOutlet.text!.count >= 2
-            {
-                var temp = displayOutlet.text!
-                temp.remove(at: displayOutlet.text!.startIndex)
-                arg2 = Float(temp)!
-                if arg2 != 0 {
-                    displayOutlet.text! = div(f1: arg1, f2: arg2)
-                }
-            }
-            else
-            {
-                arg2 = Float(historyOutlet.text!)!
-                if arg2 != 0 {
-                    displayOutlet.text! = div(f1: arg1, f2: arg2)
-                }
-            }
-        }
-        else if displayOutlet.text!.contains("x")
-        {
-            if displayOutlet.text!.count >= 2
-            {
-                var temp = displayOutlet.text!
-                temp.remove(at: displayOutlet.text!.startIndex)
-                arg2 = Float(temp)!
-                displayOutlet.text! = mult(f1: arg1, f2: arg2)
-            }
-            else
-            {
-                arg2 = Float(historyOutlet.text!)!
-                displayOutlet.text! = mult(f1: arg1, f2: arg2)
-            }
-        }
-        if displayOutlet.text!.hasSuffix(".0")
-        {
-            displayOutlet.text!.removeLast()
-            displayOutlet.text!.removeLast()
-        }
-        //re-enabling function buttons
-        divBTN.isEnabled = true
-        multBTN.isEnabled = true
-        subBTN.isEnabled = true
-        addBTN.isEnabled = true
+        
+//        //removing symbols to display history
+//        let temp = inputBuffer.replacingOccurrences(of: "|", with: " ")
+//        historyOutlet.text! += temp.replacingOccurrences(of: "#", with: " ")
+//
+//        //splitting array into chunks to perform operations
+//        var inputArr:Array = inputBuffer.split(separator: "#")
+//        //grabbing chunk to perform calculation with
+//        let calcStr = inputArr[0]
+//        //removing chunk so magic can happen
+//        inputArr.removeFirst()
+//        //putting into array to be passed to function
+//        let calcArr:Array = calcStr.split(separator: "|")
+        
+//        calc(array:calcArr)
+//        displayOutlet.text! = "\(inputArr)"
+        //removing symbols to display history
+        var temp = inputBuffer.replacingOccurrences(of: "|", with: " ")
+        historyOutlet.text! += temp.replacingOccurrences(of: "#", with: " ")
+        //splitting array into chunks to perform operations
+        var inputArr:Array = inputBuffer.split(separator: "#")
+        eq(inputArr:inputArr)
+        
+        
     }
     
-    
+
 }
 
