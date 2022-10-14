@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kapfer_SearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="aWq-5W-e7i">
+                                <rect key="frame" x="20" y="125" width="374" height="646"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="gxk-Ax-8uk">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a keyword to search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0SG-Os-08e" userLabel="searchTextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="282.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="textChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="4P3-hM-J6Q"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgC-Dz-iEn">
+                                                <rect key="frame" x="283.5" y="0.0" width="90.5" height="34"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="magnifyingglass" catalog="system" title="Search">
+                                                    <color key="baseBackgroundColor" red="0.95655830620000004" green="0.55209047450000004" blue="0.42007006689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="searchButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8y6-sW-GEY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="no-result" translatesAutoresizingMaskIntoConstraints="NO" id="ibn-is-e9P" userLabel="resultImage">
+                                        <rect key="frame" x="0.0" y="84" width="374" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="PEp-cu-bqQ"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="OLa-HW-xuE">
+                                        <rect key="frame" x="0.0" y="334" width="374" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhU-DE-zBT">
+                                                <rect key="frame" x="0.0" y="0.0" width="162" height="31"/>
+                                                <color key="tintColor" red="0.95655830620000004" green="0.55209047450000004" blue="0.42007006689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Prev Img">
+                                                    <color key="baseBackgroundColor" red="0.95655830620000004" green="0.55209047450000004" blue="0.42007006689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="showPreviousImagesBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aTp-UJ-WMg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NN-2N-Tc7">
+                                                <rect key="frame" x="212" y="0.0" width="162" height="31"/>
+                                                <color key="tintColor" red="0.95655830620000004" green="0.55209047450000004" blue="0.42007006689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Next Img">
+                                                    <color key="baseBackgroundColor" red="0.95655830620000004" green="0.55209047450000004" blue="0.42007006689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="showNextImagesBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bBL-hT-FUd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="frg-Aj-kRy" userLabel="topicInfoText">
+                                        <rect key="frame" x="0.0" y="415" width="374" height="150"/>
+                                        <color key="backgroundColor" red="0.1674192763" green="0.1674192763" blue="0.1674192763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="qwG-qw-9GV"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpI-Zs-aHn">
+                                        <rect key="frame" x="0.0" y="615" width="374" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Reset">
+                                            <color key="baseBackgroundColor" red="0.95655830620000004" green="0.55209047450000004" blue="0.42007006689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="resetOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zQF-xx-jNR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.1674192763" green="0.1674192763" blue="0.1674192763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aWq-5W-e7i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="75o-2L-SFb"/>
+                            <constraint firstItem="aWq-5W-e7i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bij-Cj-MHz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aWq-5W-e7i" secondAttribute="trailing" constant="20" id="vTz-5m-Gq3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextOutlet" destination="8NN-2N-Tc7" id="bt5-E7-DfJ"/>
+                        <outlet property="prevOutlet" destination="GhU-DE-zBT" id="ewJ-p4-9lf"/>
+                        <outlet property="resetOutlet" destination="fpI-Zs-aHn" id="G3y-3h-69h"/>
+                        <outlet property="resultImage" destination="ibn-is-e9P" id="ac3-Db-o6B"/>
+                        <outlet property="searchBtnOutlet" destination="BgC-Dz-iEn" id="tTn-ic-OeD"/>
+                        <outlet property="searchTextField" destination="0SG-Os-08e" id="Pxf-sX-gW9"/>
+                        <outlet property="topicInfoText" destination="frg-Aj-kRy" id="xMt-hg-Kq0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="no-result" width="1920" height="1920"/>
+    </resources>
+</document>
