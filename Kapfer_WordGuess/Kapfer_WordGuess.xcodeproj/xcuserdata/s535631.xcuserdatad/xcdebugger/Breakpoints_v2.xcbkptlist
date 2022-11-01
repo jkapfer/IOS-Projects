@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "26D1F229-3B00-42FF-9A46-2C2DFB5431E0"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A12FC8C2-3124-4F98-9F95-FA658ED5E357"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kapfer_WordGuess/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "A12FC8C2-3124-4F98-9F95-FA658ED5E357 - 4b6d1b926f123287"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kapfer_WordGuess.ViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Kapfer_WordGuess.ViewController"
+                  moduleName = "Kapfer_WordGuess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s535631/Classes/ios/GitHub/IOS-Projects/Kapfer_WordGuess/Kapfer_WordGuess/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  uuid = "A12FC8C2-3124-4F98-9F95-FA658ED5E357 - 646e470565c021b1"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kapfer_WordGuess.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Kapfer_WordGuess.ViewController"
+                  moduleName = "Kapfer_WordGuess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s535631/Classes/ios/GitHub/IOS-Projects/Kapfer_WordGuess/Kapfer_WordGuess/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "197">
+               </Location>
+               <Location
+                  uuid = "A12FC8C2-3124-4F98-9F95-FA658ED5E357 - d768d41a5f2d7d00"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kapfer_WordGuess.ViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Kapfer_WordGuess.ViewController&gt;"
+                  moduleName = "Kapfer_WordGuess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s535631/Classes/ios/GitHub/IOS-Projects/Kapfer_WordGuess/Kapfer_WordGuess/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "A12FC8C2-3124-4F98-9F95-FA658ED5E357 - bd2ee1cac77f9cba"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kapfer_WordGuess.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Kapfer_WordGuess.ViewController&gt;"
+                  moduleName = "Kapfer_WordGuess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s535631/Classes/ios/GitHub/IOS-Projects/Kapfer_WordGuess/Kapfer_WordGuess/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "154">
+               </Location>
+               <Location
+                  uuid = "A12FC8C2-3124-4F98-9F95-FA658ED5E357 - c6fd2d29d1aad3f6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kapfer_WordGuess.ViewController.__deallocating_deinit"
+                  moduleName = "Kapfer_WordGuess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/s535631/Classes/ios/GitHub/IOS-Projects/Kapfer_WordGuess/Kapfer_WordGuess/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
