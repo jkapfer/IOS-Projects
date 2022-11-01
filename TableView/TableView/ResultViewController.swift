@@ -9,6 +9,9 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    var product: Product?
+    @IBOutlet weak var displayLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
