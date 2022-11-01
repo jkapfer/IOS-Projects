@@ -16,6 +16,7 @@
 		658BED702911525B008FAAF6 /* TableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658BED6F2911525B008FAAF6 /* TableViewTests.swift */; };
 		658BED7A2911525B008FAAF6 /* TableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658BED792911525B008FAAF6 /* TableViewUITests.swift */; };
 		658BED7C2911525B008FAAF6 /* TableViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658BED7B2911525B008FAAF6 /* TableViewUITestsLaunchTests.swift */; };
+		658BED8929115785008FAAF6 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658BED8829115785008FAAF6 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		658BED752911525B008FAAF6 /* TableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		658BED792911525B008FAAF6 /* TableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewUITests.swift; sourceTree = "<group>"; };
 		658BED7B2911525B008FAAF6 /* TableViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		658BED8829115785008FAAF6 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				658BED5829115258008FAAF6 /* AppDelegate.swift */,
 				658BED5A29115258008FAAF6 /* SceneDelegate.swift */,
 				658BED5C29115258008FAAF6 /* ViewController.swift */,
+				658BED8829115785008FAAF6 /* ResultViewController.swift */,
 				658BED5E29115258008FAAF6 /* Main.storyboard */,
 				658BED612911525A008FAAF6 /* Assets.xcassets */,
 				658BED632911525A008FAAF6 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				658BED5D29115258008FAAF6 /* ViewController.swift in Sources */,
 				658BED5929115258008FAAF6 /* AppDelegate.swift in Sources */,
 				658BED5B29115258008FAAF6 /* SceneDelegate.swift in Sources */,
+				658BED8929115785008FAAF6 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
