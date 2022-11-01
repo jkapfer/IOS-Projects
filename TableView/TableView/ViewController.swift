@@ -44,7 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableViewOutlet.delegate = self
         tableViewOutlet.dataSource = self
         
-        let p1 = Product(productName: "MacBookAir", productCategory: "Laptop")
+        let p1 = Product(productName: "MacBook Air", productCategory: "Laptop")
         products.append(p1)
         
         let p2 = Product(productName: "iPhone", productCategory: "cellPhone")
