@@ -15,6 +15,8 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        displayLabel.text = "The product name is \((product?.productName)!) is of \((product?.productCategory)!) category"
+        
         // Do any additional setup after loading the view.
     }
     
